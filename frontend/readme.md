@@ -7,12 +7,15 @@ The Anythink Frontend is an SPA written with [React](https://reactjs.org/) and [
 Make sure your server is up and running to serve requests.
 
 ### Setup
+
 1. Clone this repository
+
 ```bash
 git@github.com:ObelusFamily/Anythink-Market-4c9a1.git
 ```
+
 2. Install Docker
-3. Run `docker-compose up` 
+3. Run `docker-compose up`
 
 ## Pages overview
 
