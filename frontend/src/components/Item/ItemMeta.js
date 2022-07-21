@@ -2,13 +2,12 @@ import ItemActions from "./ItemActions";
 import { Link } from "react-router-dom";
 import React from "react";
 
-const ItemMeta = (props) => {
-  const item = props.item;
+const ItemMeta = ({ item, canModify }) => {
   return (
     <div className="d-flex flex-row align-items-center pt-2">
       <Link to={`/@${item.seller.username}`}>
         <img
-          src={item.seller.image}
+          src={item.seller?.image}
           alt={item.seller.username}
           className="user-pic mr-2"
         />
@@ -21,7 +20,7 @@ const ItemMeta = (props) => {
         <span className="date">{new Date(item.createdAt).toDateString()}</span>
       </div>
 
-      <ItemActions canModify={props.canModify} item={item} />
+      <ItemActions canModify={canModify} item={item} />
     </div>
   );
 };
